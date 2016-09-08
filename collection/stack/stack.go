@@ -30,14 +30,19 @@ func (this *Stack) Pop() interface{} {
 	return value
 }
 
+//查看栈顶元素
+func (this *Stack) Top() interface{} {
+	return this.array[this.len-1]
+}
+
 //返回指定索引的元素
 func (this *Stack) Get(i int) interface{} {
 	return this.array[i]
 }
 
-//是否还有下一个元素
-func (this *Stack) HasNext() bool {
-	return this.len > 0
+//是否是空
+func (this *Stack) IsEmpty() bool {
+	return this.len == 0
 }
 
 //func (this *Stack) String() string {
